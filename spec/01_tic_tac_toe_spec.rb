@@ -70,17 +70,17 @@ describe './lib/tic_tac_toe.rb' do
     #   end
     # end
 
-    # describe '#move' do
-    #   it 'allows "X" player in the top left and "O" in the middle' do
-    #     game = TicTacToe.new
-    #     game.move(0, "X")
-    #     game.move(4, "O")
-    #
-    #     board = game.instance_variable_get(:@board)
-    #
-    #     expect(board).to eq(["X", " ", " ", " ", "O", " ", " ", " ", " "])
-    #   end
-    # end
+    describe '#move' do
+      it 'allows "X" player in the top left and "O" in the middle' do
+        game = TicTacToe.new
+        game.move(0, "X")
+        game.move(4, "O")
+
+        board = game.instance_variable_get(:@board)
+
+        expect(board).to eq(["X", " ", " ", " ", "O", " ", " ", " ", " "])
+      end
+    end
 
     describe '#position_taken?' do
       it 'returns true/false based on whether the position on the board is already occupied' do
