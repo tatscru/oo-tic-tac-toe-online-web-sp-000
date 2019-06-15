@@ -120,7 +120,7 @@ describe './lib/tic_tac_toe.rb' do
       #   game = TicTacToe.new
       #   expect(game.valid_move?(99)).to be_falsey
       # end
-    end
+    # end
 
     describe '#turn_count' do
       it 'counts occupied positions' do
