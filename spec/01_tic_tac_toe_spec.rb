@@ -115,12 +115,12 @@ describe './lib/tic_tac_toe.rb' do
         expect(game.valid_move?(index)).to be_falsey
       end
 
-      # it 'checks that the attempted move is within the bounds of the game board' do
-      #   allow_any_instance_of(TicTacToe).to receive(:position_taken?).and_return(false)
-      #   game = TicTacToe.new
-      #   expect(game.valid_move?(99)).to be_falsey
-      # end
-    # end
+      it 'checks that the attempted move is within the bounds of the game board' do
+        allow_any_instance_of(TicTacToe).to receive(:position_taken?).and_return(false)
+        game = TicTacToe.new
+        expect(game.valid_move?(99)).to be_falsey
+      end
+    end
 
     describe '#turn_count' do
       it 'counts occupied positions' do
